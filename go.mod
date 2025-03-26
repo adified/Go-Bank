@@ -3,9 +3,11 @@ module bank
 go 1.24.1
 
 require (
+	github.com/aead/chacha20poly1305 v0.0.0-20170617001512-233f39982aeb
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/validator/v10 v10.20.0
 	github.com/lib/pq v1.10.9
+	github.com/o1egl/paseto v1.0.0
 	github.com/spf13/viper v1.20.0
 	github.com/stretchr/testify v1.10.0
 	go.uber.org/mock v0.5.0
@@ -14,9 +16,7 @@ require (
 
 require (
 	github.com/aead/chacha20 v0.0.0-20180709150244-8b13a72661da // indirect
-	github.com/aead/chacha20poly1305 v0.0.0-20170617001512-233f39982aeb // indirect
 	github.com/aead/poly1305 v0.0.0-20180717145839-3fee0db0b635 // indirect
-	github.com/o1egl/paseto v1.0.0 // indirect
 	github.com/pkg/errors v0.8.0 // indirect
 )
 
