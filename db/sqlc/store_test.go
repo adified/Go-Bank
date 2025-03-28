@@ -9,9 +9,9 @@ import (
 )
 
 func TestTransferTx(t *testing.T) {
-	fmt.Println("testDB:", testDB) // Add this line
+	// fmt.Println("testDB:", testDB) // Add this line
 	store := NewStore(testDB)
-	fmt.Println("store:", store) // Add this line
+	// fmt.Println("store:", store) // Add this line
 
 	account1 := createRandomAccount(t)
 	account2 := createRandomAccount(t)
