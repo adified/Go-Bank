@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
       - name: Configure AWS credentials using Access Keys
         uses: aws-actions/configure-aws-credentials@v4
         with:
