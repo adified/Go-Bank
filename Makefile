@@ -1,7 +1,5 @@
-include .env
-
-DB_URL=postgresql://root:$(DATABASE_PASSWORD)@selfbank.cne4ow4mqpfk.us-east-1.rds.amazonaws.com:5432/selfbank
-# DB_URL=postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable
+# DB_URL=postgresql://root:$(DATABASE_PASSWORD)@selfbank.cne4ow4mqpfk.us-east-1.rds.amazonaws.com:5432/selfbank
+DB_URL=postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable
 
 network:
 	docker network create bank-network
