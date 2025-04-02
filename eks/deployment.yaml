@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: self-bank-api-deployment
+  name: selfbank-api-deployment
   labels:
-    app: self-bank-api
+    app: selfbank-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: self-bank-api
+      app: selfbank-api
   template:
     metadata:
       labels:
-        app: self-bank-api
+        app: selfbank-api
     spec:
       containers:
-        - name: self-bank-api
+        - name: selfbank-api
           image: 442426881067.dkr.ecr.us-east-1.amazonaws.com/selfbank:latest
           imagePullPolicy: Always
           ports:
