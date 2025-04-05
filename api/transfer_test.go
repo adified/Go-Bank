@@ -9,10 +9,12 @@ import (
 	"testing"
 	"time"
 
-	mockdb "bank/db/mock"
-	db "bank/db/sqlc"
-	"bank/token"
-	"bank/util"
+	"github.com/adified/Go-Bank/token"
+	"github.com/adified/Go-Bank/util"
+
+	db "github.com/adified/Go-Bank/db/sqlc"
+
+	mockdb "github.com/adified/Go-Bank/db/mock"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"

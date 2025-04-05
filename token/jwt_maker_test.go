@@ -1,9 +1,10 @@
 package token
 
 import (
-	"bank/util"
 	"testing"
 	"time"
+
+	"github.com/adified/Go-Bank/util"
 
 	"github.com/golang-jwt/jwt"
 	"github.com/stretchr/testify/require"

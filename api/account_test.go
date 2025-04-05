@@ -1,10 +1,6 @@
 package api
 
 import (
-	mockdb "bank/db/mock"
-	db "bank/db/sqlc"
-	"bank/token"
-	"bank/util"
 	"bytes"
 	"database/sql"
 	"encoding/json"
@@ -14,6 +10,14 @@ import (
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	"github.com/adified/Go-Bank/util"
+
+	"github.com/adified/Go-Bank/token"
+
+	db "github.com/adified/Go-Bank/db/sqlc"
+
+	mockdb "github.com/adified/Go-Bank/db/mock"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"

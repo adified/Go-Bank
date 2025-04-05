@@ -1,10 +1,13 @@
 package api
 
 import (
-	db "bank/db/sqlc"
-	"bank/token"
-	"bank/util"
 	"fmt"
+
+	"github.com/adified/Go-Bank/token"
+
+	db "github.com/adified/Go-Bank/db/sqlc"
+
+	"github.com/adified/Go-Bank/util"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"

@@ -1,11 +1,13 @@
 package api
 
 import (
-	db "bank/db/sqlc"
-	"bank/util"
 	"database/sql"
 	"net/http"
 	"time"
+
+	"github.com/adified/Go-Bank/util"
+
+	db "github.com/adified/Go-Bank/db/sqlc"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

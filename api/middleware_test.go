@@ -1,12 +1,13 @@
 package api
 
 import (
-	"bank/token"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	"github.com/adified/Go-Bank/token"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"

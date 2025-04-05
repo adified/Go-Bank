@@ -1,14 +1,16 @@
 package api
 
 import (
-	db "bank/db/sqlc"
-	"bank/token"
 	"database/sql"
 	"errors"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/adified/Go-Bank/token"
 	"github.com/lib/pq"
+
+	db "github.com/adified/Go-Bank/db/sqlc"
+
+	"github.com/gin-gonic/gin"
 )
 
 type createAccountRequest struct {

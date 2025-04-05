@@ -1,11 +1,12 @@
 package api
 
 import (
-	"bank/token"
 	"errors"
 	"fmt"
 	"net/http"
 	"strings"
+
+	"github.com/adified/Go-Bank/token"
 
 	"github.com/gin-gonic/gin"
 )

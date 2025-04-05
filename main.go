@@ -1,11 +1,14 @@
 package main
 
 import (
-	"bank/api"
-	db "bank/db/sqlc"
-	"bank/util"
 	"database/sql"
 	"log"
+
+	"github.com/adified/Go-Bank/util"
+
+	db "github.com/adified/Go-Bank/db/sqlc"
+
+	"github.com/adified/Go-Bank/api"
 
 	_ "github.com/lib/pq"
 )

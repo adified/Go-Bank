@@ -10,10 +10,10 @@
 package mockdb
 
 import (
-	db "bank/db/sqlc"
 	context "context"
 	reflect "reflect"
 
+	db "github.com/adified/Go-Bank/db/sqlc"
 	uuid "github.com/google/uuid"
 	gomock "go.uber.org/mock/gomock"
 )

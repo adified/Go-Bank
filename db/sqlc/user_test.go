@@ -1,10 +1,11 @@
 package db
 
 import (
-	"bank/util"
 	"context"
 	"testing"
 	"time"
+
+	"github.com/adified/Go-Bank/util"
 
 	"github.com/stretchr/testify/require"
 )
