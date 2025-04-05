@@ -1,4 +1,4 @@
-module bank
+module github.com/adified/Go-Bank
 
 go 1.24.1
 
