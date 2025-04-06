@@ -7,6 +7,7 @@
 package pb
 
 import (
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -24,11 +25,11 @@ var File_service_self_bank_proto protoreflect.FileDescriptor
 
 const file_service_self_bank_proto_rawDesc = "" +
 	"\n" +
-	"\x17service_self_bank.proto\x12\x02pb\x1a\x15rpc_create_user.proto\x1a\x14rpc_login_user.proto2\x85\x01\n" +
-	"\bSelfBank\x12=\n" +
+	"\x17service_self_bank.proto\x12\x02pb\x1a\x1cgoogle/api/annotations.proto\x1a\x15rpc_create_user.proto\x1a\x14rpc_login_user.proto2\xb8\x01\n" +
+	"\bSelfBank\x12W\n" +
 	"\n" +
-	"CreateUser\x12\x15.pb.CreateUserRequest\x1a\x16.pb.CreateUserResponse\"\x00\x12:\n" +
-	"\tLoginUser\x12\x14.pb.LoginUserRequest\x1a\x15.pb.LoginUserResponse\"\x00B\x1fZ\x1dgithub.com/adified/Go-Bank/pbb\x06proto3"
+	"CreateUser\x12\x15.pb.CreateUserRequest\x1a\x16.pb.CreateUserResponse\"\x1a\x82\xd3\xe4\x93\x02\x14:\x01*\"\x0f/v1/create_user\x12S\n" +
+	"\tLoginUser\x12\x14.pb.LoginUserRequest\x1a\x15.pb.LoginUserResponse\"\x19\x82\xd3\xe4\x93\x02\x13:\x01*\"\x0e/v1/login_userB\x1fZ\x1dgithub.com/adified/Go-Bank/pbb\x06proto3"
 
 var file_service_self_bank_proto_goTypes = []any{
 	(*CreateUserRequest)(nil),  // 0: pb.CreateUserRequest
