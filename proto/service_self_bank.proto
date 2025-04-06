@@ -7,7 +7,7 @@ import "rpc_login_user.proto";
 
 option go_package = "github.com/adified/Go-Bank/pb";
 
-service SimpleBank {
+service SelfBank {
     rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
     rpc LoginUser (LoginUserRequest) returns (LoginUserResponse) {}
 }
