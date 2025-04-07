@@ -22,6 +22,8 @@
   "paths": {
     "/v1/create_user": {
       "post": {
+        "summary": "Create new user",
+        "description": "Use this API to create a new user",
         "operationId": "SelfBank_CreateUser",
         "responses": {
           "200": {
@@ -54,6 +56,8 @@
     },
     "/v1/login_user": {
       "post": {
+        "summary": "Create new user",
+        "description": "Use this API to create a new user",
         "operationId": "SelfBank_LoginUser",
         "responses": {
           "200": {

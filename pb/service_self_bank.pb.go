@@ -26,11 +26,11 @@ var File_service_self_bank_proto protoreflect.FileDescriptor
 
 const file_service_self_bank_proto_rawDesc = "" +
 	"\n" +
-	"\x17service_self_bank.proto\x12\x02pb\x1a\x1cgoogle/api/annotations.proto\x1a\x15rpc_create_user.proto\x1a\x14rpc_login_user.proto\x1a.protoc-gen-openapiv2/options/annotations.proto2\xb8\x01\n" +
-	"\bSelfBank\x12W\n" +
+	"\x17service_self_bank.proto\x12\x02pb\x1a\x1cgoogle/api/annotations.proto\x1a\x15rpc_create_user.proto\x1a\x14rpc_login_user.proto\x1a.protoc-gen-openapiv2/options/annotations.proto2\xa8\x02\n" +
+	"\bSelfBank\x12\x8e\x01\n" +
 	"\n" +
-	"CreateUser\x12\x15.pb.CreateUserRequest\x1a\x16.pb.CreateUserResponse\"\x1a\x82\xd3\xe4\x93\x02\x14:\x01*\"\x0f/v1/create_user\x12S\n" +
-	"\tLoginUser\x12\x14.pb.LoginUserRequest\x1a\x15.pb.LoginUserResponse\"\x19\x82\xd3\xe4\x93\x02\x13:\x01*\"\x0e/v1/login_userBf\x92AD\x12B\n" +
+	"CreateUser\x12\x15.pb.CreateUserRequest\x1a\x16.pb.CreateUserResponse\"Q\x92A4\x12\x0fCreate new user\x1a!Use this API to create a new user\x82\xd3\xe4\x93\x02\x14:\x01*\"\x0f/v1/create_user\x12\x8a\x01\n" +
+	"\tLoginUser\x12\x14.pb.LoginUserRequest\x1a\x15.pb.LoginUserResponse\"P\x92A4\x12\x0fCreate new user\x1a!Use this API to create a new user\x82\xd3\xe4\x93\x02\x13:\x01*\"\x0e/v1/login_userBf\x92AD\x12B\n" +
 	"\rself Bank API\",\n" +
 	"\x0eadarsh agarwal\x12\x1ahttps://github.com/adified2\x031.1Z\x1dgithub.com/adified/Go-Bank/pbb\x06proto3"
 
