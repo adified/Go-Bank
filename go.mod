@@ -11,6 +11,7 @@ require (
 	github.com/lib/pq v1.10.9
 	github.com/o1egl/paseto v1.0.0
 	github.com/rakyll/statik v0.1.7
+	github.com/rs/zerolog v1.34.0
 	github.com/spf13/viper v1.20.0
 	github.com/stretchr/testify v1.10.0
 	go.uber.org/mock v0.5.0
@@ -26,6 +27,7 @@ require (
 	github.com/aead/poly1305 v0.0.0-20180717145839-3fee0db0b635 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
+	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 )
 
@@ -64,7 +66,7 @@ require (
 	go.uber.org/multierr v1.9.0 // indirect
 	golang.org/x/arch v0.8.0 // indirect
 	golang.org/x/net v0.35.0 // indirect
-	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/sys v0.32.0 // indirect
 	golang.org/x/text v0.22.0 // indirect
 	google.golang.org/protobuf v1.36.6
 	gopkg.in/yaml.v3 v3.0.1 // indirect
