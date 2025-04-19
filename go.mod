@@ -8,6 +8,7 @@ require (
 	github.com/go-playground/validator/v10 v10.20.0
 	github.com/golang-migrate/migrate/v4 v4.18.2
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3
+	github.com/hibiken/asynq v0.25.1
 	github.com/lib/pq v1.10.9
 	github.com/o1egl/paseto v1.0.0
 	github.com/rakyll/statik v0.1.7
@@ -29,7 +30,6 @@ require (
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
-	github.com/hibiken/asynq v0.25.1 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/redis/go-redis/v9 v9.7.0 // indirect
