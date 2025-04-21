@@ -19,9 +19,10 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	SelfBank_CreateUser_FullMethodName = "/pb.SelfBank/CreateUser"
-	SelfBank_UpdateUser_FullMethodName = "/pb.SelfBank/UpdateUser"
-	SelfBank_LoginUser_FullMethodName  = "/pb.SelfBank/LoginUser"
+	SelfBank_CreateUser_FullMethodName  = "/pb.SelfBank/CreateUser"
+	SelfBank_UpdateUser_FullMethodName  = "/pb.SelfBank/UpdateUser"
+	SelfBank_LoginUser_FullMethodName   = "/pb.SelfBank/LoginUser"
+	SelfBank_VerifyEmail_FullMethodName = "/pb.SelfBank/VerifyEmail"
 )
 
 // SelfBankClient is the client API for SelfBank service.
@@ -31,6 +32,7 @@ type SelfBankClient interface {
 	CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*CreateUserResponse, error)
 	UpdateUser(ctx context.Context, in *UpdateUserRequest, opts ...grpc.CallOption) (*UpdateUserResponse, error)
 	LoginUser(ctx context.Context, in *LoginUserRequest, opts ...grpc.CallOption) (*LoginUserResponse, error)
+	VerifyEmail(ctx context.Context, in *VerifyEmailRequest, opts ...grpc.CallOption) (*VerifyEmailResponse, error)
 }
 
 type selfBankClient struct {
@@ -71,6 +73,16 @@ func (c *selfBankClient) LoginUser(ctx context.Context, in *LoginUserRequest, op
 	return out, nil
 }
 
+func (c *selfBankClient) VerifyEmail(ctx context.Context, in *VerifyEmailRequest, opts ...grpc.CallOption) (*VerifyEmailResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(VerifyEmailResponse)
+	err := c.cc.Invoke(ctx, SelfBank_VerifyEmail_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // SelfBankServer is the server API for SelfBank service.
 // All implementations must embed UnimplementedSelfBankServer
 // for forward compatibility.
@@ -78,6 +90,7 @@ type SelfBankServer interface {
 	CreateUser(context.Context, *CreateUserRequest) (*CreateUserResponse, error)
 	UpdateUser(context.Context, *UpdateUserRequest) (*UpdateUserResponse, error)
 	LoginUser(context.Context, *LoginUserRequest) (*LoginUserResponse, error)
+	VerifyEmail(context.Context, *VerifyEmailRequest) (*VerifyEmailResponse, error)
 	mustEmbedUnimplementedSelfBankServer()
 }
 
@@ -96,6 +109,9 @@ func (UnimplementedSelfBankServer) UpdateUser(context.Context, *UpdateUserReques
 }
 func (UnimplementedSelfBankServer) LoginUser(context.Context, *LoginUserRequest) (*LoginUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LoginUser not implemented")
+}
+func (UnimplementedSelfBankServer) VerifyEmail(context.Context, *VerifyEmailRequest) (*VerifyEmailResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method VerifyEmail not implemented")
 }
 func (UnimplementedSelfBankServer) mustEmbedUnimplementedSelfBankServer() {}
 func (UnimplementedSelfBankServer) testEmbeddedByValue()                  {}
@@ -172,6 +188,24 @@ func _SelfBank_LoginUser_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
+func _SelfBank_VerifyEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(VerifyEmailRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SelfBankServer).VerifyEmail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: SelfBank_VerifyEmail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SelfBankServer).VerifyEmail(ctx, req.(*VerifyEmailRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // SelfBank_ServiceDesc is the grpc.ServiceDesc for SelfBank service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -190,6 +224,10 @@ var SelfBank_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "LoginUser",
 			Handler:    _SelfBank_LoginUser_Handler,
+		},
+		{
+			MethodName: "VerifyEmail",
+			Handler:    _SelfBank_VerifyEmail_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
