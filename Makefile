@@ -49,8 +49,9 @@ server:
 	go run main.go
 
 mock:
-	mockgen -package mockdb -destination db/mock/store.go /Users/adarshagarwal/Documents/CODING/Golang/selfbank/db/sqlc Store 
-	# mockgen -package mockwk -destination worker/mock/distributor.go /Users/adarshagarwal/Documents/CODING/Golang/selfbank/db/sqlc TaskDistributor
+	mockgen -package mockdb -destination db/mock/store.go github.com/adified/Go-Bank/db/sqlc Store 
+	mockgen -package mockwk -destination worker/mock/distributor.go github.com/adified/Go-Bank/worker TaskDistributor
+	# mockgen -package mockwk -destination worker/mock/distributor.go github.com/adified/Go-Bank/db/sqlc TaskDistributor
 
 proto:
 	rm -f pb/*.go

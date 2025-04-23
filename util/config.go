@@ -40,10 +40,7 @@ func LoadConfig(path string) (config Config, err error) {
 	viper.SetConfigName(".env")
 	viper.SetConfigType("env")
 
-	err = viper.ReadInConfig()
-	if err != nil {
-		return
-	}
+	_ = viper.ReadInConfig()
 
 	viper.AutomaticEnv()
 
