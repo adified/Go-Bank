@@ -1,6 +1,6 @@
 module github.com/adified/Go-Bank
 
-go 1.24.1
+go 1.24.2
 
 require (
 	github.com/aead/chacha20poly1305 v0.0.0-20170617001512-233f39982aeb
