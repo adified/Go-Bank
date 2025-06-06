@@ -50,5 +50,8 @@ jobs:
           kubectl apply -f eks/deployment.yaml
           kubectl apply -f eks/service.yaml
           export EMAIL_ADDRESS="${{ secrets.EMAIL_ADDRESS }}" # Export the email secret
+          export EMAIL_SENDER_ADDRESS="${{ secrets.EMAIL_SENDER_ADDRESS }}" # Export the EMAIL_SENDER_ADDRESS
+          export EMAIL_SENDER_NAME="${{ secrets.EMAIL_SENDER_NAME }}" # Export the EMAIL_SENDER_NAME
+          export EMAIL_SENDER_PASSWORD="${{ secrets.EMAIL_SENDER_PASSWORD }}" # Export the EMAIL_SENDER_PASSWORD
           envsubst < eks/issuer.yaml | kubectl apply -f - # Apply issuer.yaml with email substituted
           kubectl apply -f eks/ingress.yaml

@@ -27,6 +27,13 @@ jobs:
           --health-retries 5
 
     steps:
+      - name: Set environment variables from secrets
+        run: |
+          echo "EMAIL_SENDER_NAME=${{ secrets.EMAIL_SENDER_NAME }}" >> "$GITHUB_ENV"
+          echo "EMAIL_SENDER_ADDRESS=${{ secrets.EMAIL_SENDER_ADDRESS }}" >> "$GITHUB_ENV"
+          echo "EMAIL_SENDER_PASSWORD=${{ secrets.EMAIL_SENDER_PASSWORD }}" >> "$GITHUB_ENV"
+          # Add any other secrets that correspond to your Config struct
+
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
         with:
