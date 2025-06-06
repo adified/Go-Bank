@@ -104,7 +104,9 @@ make mockgen     # Generates mocks using GoMock
 
 ### Swagger available at: http://localhost:8080/swagger/index.html
 
-### gRPC services defined in api/proto/\*.proto
+### gRPC services defined in proto/\*.proto
+
+### gRPC Gateway services defined in pb/
 
 ---
 
